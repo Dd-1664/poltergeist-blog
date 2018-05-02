@@ -1,0 +1,18 @@
+.elasticbeanstalk/
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Editors
+/.idea
+
+/.git
+/vendor/
+/.sass-cache
+/var/cache/
+/var/logs/
+/var/sessions/
+/node_modules
+/web/bundles/
+/web/media/
+/web/uploads/media/
+/web/build/

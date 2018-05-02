@@ -1,0 +1,20 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+
+
+
+parameters:
+
+    # Globals
+    secret: dda87f9ah3321ed521fqa74234x64
+    locale: fr
+
+
+    # Primary Database
+
+    database_host:      192.168.1.117
+    database_port:      3306
+    database_name:      poltergeist_blog_dev
+    database_user:      remote
+    database_password:  pass
