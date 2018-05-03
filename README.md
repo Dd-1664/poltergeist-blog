@@ -35,6 +35,7 @@ ou utiliser Kitematic (Docker GUI):
 
 * `docker build -t poltergeist .`
 * `docker run -p 8080:80 -v $(pwd):/var/www/html --name poltergeist poltergeist`
+* `docker run --rm -p 8080:80 -v c:/Users:/data poltergeist ls /data --name poltergeist poltergeist`
 * Access <http://localhost:8080/app_dev.php>
 
 ---

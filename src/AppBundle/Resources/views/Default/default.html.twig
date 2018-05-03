@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<div class="site-wrapper">        
+<div class="site-wrapper">
 <header class="site-header outer " style="background-image: url(https://casper.ghost.org/v1.0.0/images/blog-cover.jpg)">
     <div class="inner">
         <div class="site-header-content">
@@ -12,12 +12,11 @@
         <nav class="site-nav">
             <div class="site-nav-left">
                 <ul class="nav" role="menu">
-                    <li class="nav-home nav-current" role="menuitem"><a href="#">Home</a></li>
+                    <li class="nav-home nav-current" role="menuitem"><a href="/">Home</a></li>
                 </ul>
             </div>
             <div class="site-nav-right">
                 <div class="social-links">
-                    { dump() }
                 </div>
                 <a class="rss-button" href="https://feedly.com/i/subscription/feed/http://localhost:2368/rss/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
                 </a>
@@ -29,18 +28,26 @@
 <main id="site-main" class="site-main outer">
     <div class="inner">
         <div class="post-feed">
-            {% for article in articles %}
-                {% include 'AppBundle:Default:article.html.twig' %}
-            {% endfor %}
+            {# {% for id in article %} #}
+                <h1>LOOP ARTICLE</h1>
+                <span>{{ dump() }}</span>
+            {# {% include 'AppBundle:Default:article.html.twig' %} #}
+            {# {% endfor %} #}
+            {# {% include 'AppBundle:Default:article.html.twig' %} #}
+            {# {% include 'AppBundle:Default:article.html.twig' %} #}
+            {# {% include 'AppBundle:Default:article.html.twig' %} #}
+            {# {% include 'AppBundle:Default:article.html.twig' %} #}
+
         </div>
     </div>
 </main>
 
 <footer class="site-footer outer">
     <div class="site-footer-content inner">
-        <section class="copyright"><a href="http://localhost:2368">Ghost</a> &copy; 2018</section>
+        <section class="copyright">Copyright &copy; InJah {{ "now"|date("Y") }}</section>
         <nav class="site-footer-nav">
-            <a href="http://localhost:2368">Latest Posts</a>               
+            {# TODO: CREATE LATEST POST #}
+            <a href="http://localhost:2368">Latest Posts</a>
             <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
         </nav>
     </div>
