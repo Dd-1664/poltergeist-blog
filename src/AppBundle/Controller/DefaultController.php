@@ -14,7 +14,7 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $article = $this->getDoctrine()
+        $allArticle = $this->getDoctrine()
         ->getRepository(Article::class)
         ->findAll();
 
@@ -25,7 +25,7 @@ class DefaultController extends Controller
 
         return $this->render('AppBundle:Default:default.html.twig',
             [
-                'article' => $article
+                'articles' => $allArticle
                 // 'form' => $form->createView()
             ]
         );

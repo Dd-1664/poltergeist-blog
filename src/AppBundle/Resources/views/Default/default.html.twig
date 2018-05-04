@@ -28,16 +28,9 @@
 <main id="site-main" class="site-main outer">
     <div class="inner">
         <div class="post-feed">
-            {# {% for id in article %} #}
-                <h1>LOOP ARTICLE</h1>
-                <span>{{ dump() }}</span>
-            {# {% include 'AppBundle:Default:article.html.twig' %} #}
-            {# {% endfor %} #}
-            {# {% include 'AppBundle:Default:article.html.twig' %} #}
-            {# {% include 'AppBundle:Default:article.html.twig' %} #}
-            {# {% include 'AppBundle:Default:article.html.twig' %} #}
-            {# {% include 'AppBundle:Default:article.html.twig' %} #}
-
+            {% for article in articles %}
+                {% include 'AppBundle:Default:article.html.twig' %}
+            {% endfor %}
         </div>
     </div>
 </main>
