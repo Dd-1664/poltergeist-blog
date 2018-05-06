@@ -40,6 +40,13 @@ class Article
      */
     protected $readTime;
 
+    /**
+     * @ORM\Column(type="string", length=255, name="picture_link")
+     * @var string
+     */
+    protected $pictureLink;
+
+    
     public function getId()
     {
         return $this->id;
@@ -88,5 +95,15 @@ class Article
     public function setReadTime($readTime)
     {
         $this->readTime = $readTime;
+    }
+
+    public function getPictureLink()
+    {
+        return $this->pictureLink;
+    }
+
+    public function setPictureLink($pictureLink)
+    {
+        $this->pictureLink = $pictureLink;
     }
 }
