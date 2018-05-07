@@ -2,10 +2,10 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Article;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use AppBundle\Entity\Article;
 
 class DefaultController extends Controller
 {
@@ -15,12 +15,12 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         $allArticle = $this->getDoctrine()
-        ->getRepository(Article::class)
-        ->findAll();
+            ->getRepository(Article::class)
+            ->findAll();
         // TODO: LIMIT ARTICLE DISPLAY
         return $this->render('AppBundle:Default:default.html.twig',
             [
-                'articles' => $allArticle
+                'articles' => $allArticle,
             ]
         );
     }
@@ -32,20 +32,15 @@ class DefaultController extends Controller
      * @param int $id
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function displayAction(Request $request)
+    public function displayAction(Request $request, int $id)
     {
-
-        $id = $this->getId();
-
-        var_dump($id);
-
         $singleArticle = $this->getDoctrine()
-        ->getRepository(Article::class)
-        ->findOneById($id);
+            ->getRepository(Article::class)
+            ->findOneById($id);
 
         return $this->render('AppBundle:Article:display.html.twig',
             [
-                'articles' => $singleArticle
+                'article' => $singleArticle,
             ]
         );
     }

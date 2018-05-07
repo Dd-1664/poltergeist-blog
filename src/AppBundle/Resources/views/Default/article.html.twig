@@ -1,6 +1,6 @@
 <article class="post-card post tag-getting-started">
-    <a class="post-card-content-link" href="{{ asset('/'~article.id~'') }}">
-    <div class="post-card-image" style="background: url("{{ asset(''~article.pictureLink~'') }}")"></div>
+    <a class="post-card-content-link" href="{{ app.request.baseUrl }}/{{ article.id }}">
+    <div class="post-card-image" style="background-image: url({{ article.pictureLink }})"></div>
     <div class="post-card-content">
         {# TODO: SET PAGE URL #}
         <header class="post-card-header">
