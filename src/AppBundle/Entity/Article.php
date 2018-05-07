@@ -25,7 +25,6 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @var string
      */
     protected $title;
 
@@ -36,74 +35,131 @@ class Article
 
     /**
      * @ORM\Column(type="integer", length=3,  name="read_time")
-     * @var integer
      */
     protected $readTime;
 
     /**
      * @ORM\Column(type="string", length=255, name="picture_link")
-     * @var string
      */
     protected $pictureLink;
 
+    /**
+     * @ORM\Column(type="date", name="creation_date", nullable=true)
+     */
+    protected $createdAt;
+
+
     
+    // GETTERS & SETTERS
+    /**
+     * @return mixed
+     */
     public function getId()
     {
         return $this->id;
     }
 
-    public function setId($id)
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
     {
         $this->id = $id;
     }
 
+    /**
+     * @return mixed
+     */
     public function getAuthor()
     {
         return $this->author;
     }
 
-    public function setAuthor($author)
+    /**
+     * @param mixed $author
+     */
+    public function setAuthor($author): void
     {
         $this->author = $author;
     }
 
+    /**
+     * @return mixed
+     */
     public function getTitle()
     {
         return $this->title;
     }
 
-    public function setTitle($title)
+    /**
+     * @param mixed $title
+     */
+    public function setTitle($title): void
     {
         $this->title = $title;
     }
 
+    /**
+     * @return mixed
+     */
     public function getArticleText()
     {
         return $this->articleText;
     }
 
-    public function setArticleText($articleText)
+    /**
+     * @param mixed $articleText
+     */
+    public function setArticleText($articleText): void
     {
         $this->articleText = $articleText;
     }
 
+    /**
+     * @return mixed
+     */
     public function getReadTime()
     {
         return $this->readTime;
     }
 
-    public function setReadTime($readTime)
+    /**
+     * @param mixed $readTime
+     */
+    public function setReadTime($readTime): void
     {
         $this->readTime = $readTime;
     }
 
+    /**
+     * @return mixed
+     */
     public function getPictureLink()
     {
         return $this->pictureLink;
     }
 
-    public function setPictureLink($pictureLink)
+    /**
+     * @param mixed $pictureLink
+     */
+    public function setPictureLink($pictureLink): void
     {
         $this->pictureLink = $pictureLink;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param mixed $createdAt
+     */
+    public function setCreatedAt($createdAt): void
+    {
+        $this->createdAt = $createdAt;
     }
 }

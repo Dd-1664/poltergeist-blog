@@ -17,16 +17,35 @@ class DefaultController extends Controller
         $allArticle = $this->getDoctrine()
         ->getRepository(Article::class)
         ->findAll();
-
-
-
-
-
-
+        // TODO: LIMIT ARTICLE DISPLAY
         return $this->render('AppBundle:Default:default.html.twig',
             [
                 'articles' => $allArticle
-                // 'form' => $form->createView()
+            ]
+        );
+    }
+
+    /**
+     * CE CODE PERMET DE GENERER 1 PAGE PAR ID, DONC 1 PAGE PAR ARTICLE
+     * @Route("/{id}", name="article_display", requirements={"id":"\d+"})
+     * @param Request $request
+     * @param int $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function displayAction(Request $request)
+    {
+
+        $id = $this->getId();
+
+        var_dump($id);
+
+        $singleArticle = $this->getDoctrine()
+        ->getRepository(Article::class)
+        ->findOneById($id);
+
+        return $this->render('AppBundle:Article:display.html.twig',
+            [
+                'articles' => $singleArticle
             ]
         );
     }

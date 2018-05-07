@@ -34,15 +34,7 @@
     </div>
 </main>
 
-<footer class="site-footer outer">
-    <div class="site-footer-content inner">
-        <section class="copyright">Copyright &copy; InJah {{ "now"|date("Y") }}</section>
-        <nav class="site-footer-nav">
-            {# TODO: CREATE LATEST POST #}
-            <a href="http://localhost:2368">Latest Posts</a>
-            <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-        </nav>
-    </div>
-</footer>
+{% include 'footer.html.twig' %}
+
 </div>
 {% endblock body %}
