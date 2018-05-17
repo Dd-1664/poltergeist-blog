@@ -1,7 +1,5 @@
 # Poltergeist Project
 
-# TODO:
-
 ---
 
 # DB:
@@ -34,9 +32,9 @@ ou utiliser Kitematic (Docker GUI):
 # EXEMPLE DOS
 
 * `docker build -t blog .`
-* `docker run -p 8080:80 -v $(pwd):/var/www/html --name blog blog`
-* `docker run --rm -p 8080:80 -v c:/Users/jaden/Desktop/DEV/poltergeist-blog:/var/www/html --name blog blog`
-* Access <http://localhost:8080/app_dev.php>
+* `docker run -p 8088:80 -v $(pwd):/var/www/html --name blog blog`
+* `docker run --rm -p 8088:80 -v c:/Users/jaden/Desktop/DEV/poltergeist-blog:/var/www/html --name blog blog`
+* Access <http://localhost:8088/app_dev.php>
 
 ---
 

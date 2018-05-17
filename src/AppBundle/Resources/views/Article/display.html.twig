@@ -6,17 +6,16 @@
 <header class="site-header outer">
     <div class="inner">
         <nav class="site-nav">
-    <div class="site-nav-left">
-            <ul class="nav" role="menu">
-    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-</ul>
-
-    </div>
-    <div class="site-nav-right">
-        <div class="social-links"></div>
-        <a class="rss-button" href="https://feedly.com/i/subscription/feed/http://localhost:2368/rss/" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/>
-        <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+            <div class="site-nav-left">
+                <ul class="nav" role="menu">
+                    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+                </ul>
+            </div>
+            <div class="site-nav-right">
+            <div class="social-links"></div>
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/http://localhost:2368/rss/" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/>
+            <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
         </a>
     </div>
 </nav>
@@ -26,27 +25,21 @@
 
 <main id="site-main" class="site-main outer">
     <div class="inner">
-
         <article class="post-full post tag-getting-started ">
-
+            <figure class="post-full-image" style="background-image: url({{ article.pictureLink }})"></figure>
             <header class="post-full-header">
                 <h1 class="post-full-title">{{ article.title }}</h1>
             </header>
-
-            <figure class="post-full-image" style="background-image: url({{ article.pictureLink }})"></figure>
-
             <section class="post-full-content">
                 <div class="kg-card-markdown">{{ article.articleText }}</div>
             </section>
-
             <footer class="post-full-footer">
-<section class="author-card">
-    <section class="author-card-content">
-        <span class="post-card-tags">{{ article.createdAt|date("d/m/Y") }} - {{ article.author }}</span>
-    </section>
-</section>
-</footer>
-
+                <section class="author-card">
+                    <section class="author-card-content">
+                        <span class="post-card-tags">{{ article.createdAt|date("d/m/Y") }} - {{ article.author }}</span>
+                    </section>
+                </section>
+            </footer>
         </article>
     </div>
 </main>

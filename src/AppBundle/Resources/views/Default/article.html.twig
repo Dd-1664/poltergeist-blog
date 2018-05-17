@@ -5,15 +5,15 @@
     <a class="post-card-content-link" href="{{ app.request.baseUrl }}/{{ article.id }}">
         <div class="post-card-content">
             <header class="post-card-header">
-                <span class="post-card-tags">Article</span>
+                <span class="post-card-tags">News</span>
                 <h2 class="post-card-title">{{ article.title }}</h2>
             </header>
             <section class="post-card-excerpt">
-                <p>{{ article.articleText|striptags|slice(0,100)|default('Read more') }}...</p>
+                <p>{{ article.articleText|striptags|slice(0,150)|default('Read more') }}...</p>
             </section>
             <footer class="post-card-meta">
                 <span class="post-card-tags">{{ article.author }}</span>
-                <span class="reading-time">{{ article.readTime }} minutes</span>
+                <span class="post-card-tags">{{ article.readTime }} minutes</span>
             </footer>
         </div>
     </a>
