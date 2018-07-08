@@ -41,7 +41,6 @@ twig:
 # Doctrine Configuration
 doctrine:
     dbal:
-        url: "%env(DATABASE_URL)%"
         default_connection: pgsql
         connections:
            #Mysql
@@ -56,11 +55,11 @@ doctrine:
            #Postgresql
            pgsql:
                 driver:   pdo_pgsql
-                host:     "%env(DATABASE_HOST)%"
-                port:     "%env(DATABASE_PORT)%"
-                dbname:   "%env(DATABASE_NAME)%"
-                user:     "%env(DATABASE_USER)%"
-                password: "%env(DATABASE_PASSWORD)%"
+                host:     "%psql_database_host%"
+                port:     "%psql_database_port%"
+                dbname:   "%psql_database_name%"
+                user:     "%psql_database_user%"
+                password: "%psql_database_password%"
                 charset:  UTF8
 
     orm:
