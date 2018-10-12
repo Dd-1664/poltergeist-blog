@@ -12,16 +12,9 @@ parameters:
 
 
     # Primary Database
-    database_host:      192.168.1.117
+    database_host:      lt80glfe2gj8p5n2.chr7pe7iynqr.eu-west-1.rds.amazonaws.com
     database_port:      3306
-    database_name:      poltergeist_blog_dev
-    database_user:      remote
-    database_password:  pass
-
-    # Localhost Win 8
-    # database_host:      192.168.255.49
-    # database_port:      3306
-    # database_name:      poltergeist_blog_dev
-    # database_user:      dev
-    # database_password:  pass
+    database_name:      poltergeist_blog
+    database_user:      cqp7tvcn4ge5k1y8
+    database_password:  hl2ius3619fpzzj0
 
